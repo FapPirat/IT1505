@@ -1,0 +1,8 @@
+import telebot
+bot = telebot.TeleBot('1694867352:AAFE03FM0eGNzjy0XFDk_3os5WGLLE7Se9w')
+
+@bot.message_handler(commands=['start', 'help'])
+def send_welcome(message):
+    bot.reply_to(message, 'я бот')
+
+bot.polling(none_stop=True)
